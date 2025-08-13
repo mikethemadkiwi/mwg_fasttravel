@@ -451,7 +451,7 @@ end
 function FTOpen()
     local dbPresent = Citizen.InvokeNative("0x1E7130793AAAAB8D", DataBind[1])
     if not dbPresent then
-        DataBind[1] = Citizen.InvokeNative("0x37BB86A751148A6A", "", "FastTravel", true);
+        DataBind[1] =  DatabindingAddDataContainerFromPath("", "FastTravel");
     end
     WP = GetWaypointCoords()
     if (WP.x == 0 and WP.y == 0) then
